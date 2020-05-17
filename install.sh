@@ -16,6 +16,7 @@ cp ./ ~/hik/
 
 #Remove uncecessary files
 rm ~/hik/install.sh
+rm ~/hik/update.sh
 rm ~/hik/README.md
 
 #Edit file permissions to allow scripts to run:
