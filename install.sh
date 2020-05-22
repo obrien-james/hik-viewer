@@ -19,6 +19,13 @@ rm ~/hik/install.sh
 rm ~/hik/update.sh
 rm ~/hik/README.md
 
+#Install tornado - to run websockets
+sudo pip3 install tornado
+
+#update crontab to check HikViewer running and reconnect to missing streams every minute
+
+#Install service file to run websocket server from start of Pi
+
 #Edit file permissions to allow scripts to run:
 chmod 744 ~/hik/*.sh
 
