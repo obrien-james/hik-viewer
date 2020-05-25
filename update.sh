@@ -20,6 +20,7 @@ rm ~/hik/README.md
 
 #Edit file permissions to allow scripts to run:
 chmod 744 ~/hik/*.sh
+chmod 744 ~/hik/*.py
 
 #End of install.
 echo "Installation complete"
