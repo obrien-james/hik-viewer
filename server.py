@@ -14,7 +14,7 @@ settings = dict(
 	)
 
 #Tonado server port
-PORT = 80
+PORT = 8080
 
 
 class MainHandler(tornado.web.RequestHandler):
