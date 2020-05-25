@@ -5,7 +5,7 @@ import tornado.httpserver
 import tornado.websocket
 import tornado.ioloop
 import tornado.web
-import RPi.GPIO as GPIO
+import subprocess
 
 #Tornado Folder Paths
 settings = dict(
