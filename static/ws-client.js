@@ -39,7 +39,7 @@ $(document).ready(function(){
             });
 
 	$("#sonparc").click(function(){
-            ws.send("snparcf");
+            ws.send("sonparc");
             });
 
       });
