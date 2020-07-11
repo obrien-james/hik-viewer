@@ -7,22 +7,9 @@
 ##############################################################
 
 echo "Updating Hik-Viewer ..."
+git clone https://github.com/obrien-james/hik-viewer
 
-#Move all but config file:
-SOURCE = ./
-TARGET = ~/hik/
-find $SOURCE -type f ! -name "cameras.config" -exec mv {} $TARGET \;
+chmod 744 ./hik-viewer/upgrade.sh
 
-#Remove uncecessary files
-rm ~/hik/install.sh
-rm ~/hik/update.sh
-rm ~/hik/README.md
-
-#Edit file permissions to allow scripts to run:
-chmod 744 ~/hik/*.sh
-chmod 744 ~/hik/*.py
-
-#End of install.
-echo "Installation complete"
-echo "Please edit ~/hik/cameras.config with necessary files"
-echo "Once cameras.config has been configured - run ~/hik/hik.sh start"
+echo "running upgrade script ... "
+./hik-viewer/upgrade.sh
