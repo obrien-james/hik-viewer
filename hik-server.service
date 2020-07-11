@@ -1,8 +1,0 @@
-[Unit]
-Description=Hikvision Server Service Files
-
-[Service]
-ExecStart=python3 /home/james/hik/server.py
-
-[Install]
-WantedBy=multi-user.target
