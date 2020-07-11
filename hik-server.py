@@ -80,4 +80,3 @@ if __name__ == "__main__":
 
     except:
         print ("Exception triggered - Tornado Server stopped.")
-        GPIO.cleanup()
