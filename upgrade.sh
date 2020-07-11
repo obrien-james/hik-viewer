@@ -26,4 +26,8 @@ mv ~/hik/cameras.config.original cameras.config
 #restart cameras streams
 ~/hik/hik.sh reload
 
+#restart server
+pkill -f hik-server.sh
+~/hik/hik-server-running.sh
+
 echo "Upgrade complete"
