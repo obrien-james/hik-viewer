@@ -13,6 +13,10 @@ rm -rf ~/hik/hik-viewer/install.sh
 rm -rf ~/hik/hik-viewer/README.md
 rm -rf ~/hik/hik-viewer/cameras.config
 
+#set permissions
+chmod 744 ~/hik/hik-viewer/*.sh
+chmod 744 ~/hik/hik-viewer/*.py
+
 #update files
 cp ~/hik/hik-viewer/* ~/hik/
 
