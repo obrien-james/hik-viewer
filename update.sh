@@ -1,10 +1,10 @@
 #! /bin/bash
-########################################################
-## Created by James O'Brien                           ##
-## Date Created 17/05/2020                            ##
-## Script to run Hikvision streams on Raspberry Pi    ##
-##  - Update file - use: Run after update repository  ##
-########################################################
+##############################################################
+## Created by James O'Brien                                 ##
+## Date Created 17/05/2020                                  ##
+## Script to run Hikvision streams on Raspberry Pi          ##
+##  - Update file - use: Run to update code and run upgrade ##
+##############################################################
 
 echo "Updating Hik-Viewer ..."
 
