@@ -71,19 +71,18 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 
 
 application = tornado.web.Application([
-  (r'/', MainHandler),
-  (r'/ws', WSHandler),
+	(r'/', MainHandler),
+	(r'/ws', WSHandler),
   ], **settings)
 
-
 if __name__ == "__main__":
-    try:
-        http_server = tornado.httpserver.HTTPServer(application)
-        http_server.listen(PORT)
-        main_loop = tornado.ioloop.IOLoop.instance()
-
-        print ("Tornado Server started")
-        main_loop.start()
-
-    except:
-        print ("Exception triggered - Tornado Server stopped.")
+	try:
+		http_server = tornado.httpserver.HTTPServer(application)
+		http_server.listen(PORT)
+		main_loop = tornado.ioloop.IOLoop.instance()
+		
+		print ("Tornado Server started")
+		main_loop.start()
+	
+	except:
+		print ("Exception triggered - Tornado Server stopped.")
