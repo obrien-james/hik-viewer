@@ -26,20 +26,36 @@ $(document).ready(function(){
             ws.send("reload");
             });
 
-        $("#mgcaravans1").click(function(){
-            ws.send("mgcaravans1");
+        $("#Preset1").click(function(){
+            ws.send("Preset1");
             });
 
-        $("#mgacaravans2").click(function(){
-            ws.send("mgacaravans2");
+        $("#Preset2").click(function(){
+            ws.send("Preset2");
             });
 
-        $("#ardbrin").click(function(){
-            ws.send("ardbrin");
+        $("#Preset3").click(function(){
+            ws.send("Preset3");
             });
 
-	$("#sonparc").click(function(){
-            ws.send("sonparc");
+	$("#Preset4").click(function(){
+            ws.send("Preset4");
+            });
+	
+	$("#Preset5").click(function(){
+            ws.send("Preset5");
+            });
+
+        $("#Preset6").click(function(){
+            ws.send("Preset6");
+            });
+
+	$("#Preset7").click(function(){
+            ws.send("Preset7");
+            });
+	
+	$("#Preset8").click(function(){
+            ws.send("Preset8");
             });
 
       });
