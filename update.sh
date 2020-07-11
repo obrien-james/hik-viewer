@@ -11,5 +11,8 @@ git clone https://github.com/obrien-james/hik-viewer
 
 chmod 744 ./hik-viewer/upgrade.sh
 
+#Backup cameras.config
+mv cameras.config cameras.config.original
+
 echo "running upgrade script ... "
 ./hik-viewer/upgrade.sh
