@@ -30,19 +30,31 @@ class WSHandler(tornado.websocket.WebSocketHandler):
   def on_message(self, message):
     print ('[WS] Incoming message:'), message
     
-    if message == "mgcaravans1":
+    if message == "Preset1":
       print ('Changing to preset 1')
       subprocess.run(["~/hik/changepreset.sh 1"], shell=True)
-    if message == "mgcaravans2":
+    if message == "Preset2":
       print ('Changing to preset 2')
       subprocess.run(["~/hik/changepreset.sh 2"], shell=True)      
-    if message == "ardbrin":
+    if message == "Preset3":
       print ('Changing to preset 3')
       subprocess.run(["~/hik/changepreset.sh 3"], shell=True)
-    if message == "sonparc":
+    if message == "Preset4":
       print ('Changing to preset 4')
       subprocess.run(["~/hik/changepreset.sh 4"], shell=True)
-      
+    if message == "Preset5":
+      print ('Changing to preset 5')
+      subprocess.run(["~/hik/changepreset.sh 5"], shell=True)
+    if message == "Preset6":
+      print ('Changing to preset 6')
+      subprocess.run(["~/hik/changepreset.sh 6"], shell=True)      
+    if message == "Preset7":
+      print ('Changing to preset 7')
+      subprocess.run(["~/hik/changepreset.sh 7"], shell=True)
+    if message == "Preset8":
+      print ('Changing to preset 8')
+      subprocess.run(["~/hik/changepreset.sh 8"], shell=True)
+
     if message == 'reload':
       print ('Reloading screens ...')
       subprocess.run(["~/hik/hik.sh reload"], shell=True)
