@@ -18,7 +18,7 @@ chmod 744 ~/hik/hik-viewer/*.sh
 chmod 744 ~/hik/hik-viewer/*.py
 
 #update files
-cp ~/hik/hik-viewer/* ~/hik/
+cp -r ~/hik/hik-viewer/* ~/hik/
 
 #restore config settings
 mv ~/hik/cameras.config.original cameras.config
