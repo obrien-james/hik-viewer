@@ -7,6 +7,8 @@
 ##############################################################
 
 echo "Updating Hik-Viewer ..."
+rm -rf ~/hik/hik-viewer
+
 git clone https://github.com/obrien-james/hik-viewer
 
 chmod 744 ./hik-viewer/upgrade.sh
