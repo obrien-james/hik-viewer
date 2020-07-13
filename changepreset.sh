@@ -6,6 +6,8 @@
 ##  - Service file - Changes default preset + reload    ##
 ##########################################################
 
-sed --debug -i -E "s/DISPAYPRESET=[0-9]{1,2}/DISPAYPRESET=$1/g" cameras.config
+echo "Changing preset ... "
+pwd
+sed -i -E "s/DISPAYPRESET=[0-9]{1,2}/DISPAYPRESET=$1/g" cameras.config
 
 ./hik.sh reload
