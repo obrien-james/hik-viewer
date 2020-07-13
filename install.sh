@@ -16,7 +16,7 @@ cp ./ ~/hik/
 
 #Remove uncecessary files
 rm ~/hik/install.sh
-rm ~/hik/update.sh
+rm ~/hik/upgrade.sh
 rm ~/hik/README.md
 
 #Install tornado - to run websockets
