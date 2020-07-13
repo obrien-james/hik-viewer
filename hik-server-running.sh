@@ -8,9 +8,9 @@
 if pgrep hik-server.py >/dev/null
 
 then
-     echo "Process is running."
+     echo "Hik-server process is running."
 else
-     echo "Process is not running."
-     cd /home/james/hik
-     runuser -l james -c 'nohup python3 server.py &'
+     echo "Hik-server process is not running."
+     runuser -l james -c 'cd ~/hik'
+     runuser -l james -c 'nohup python3 hik-server.py 2>&1 | logger.sh >> hik-server.log &'
 fi 
