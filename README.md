@@ -11,4 +11,4 @@ Update cameras.config and insert presets; set default preset
 
 run as user comand for info
 
-runuser -l james -c 
+runuser -l james -c 'command'
