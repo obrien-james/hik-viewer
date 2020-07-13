@@ -7,7 +7,6 @@
 ##########################################################
 
 echo "Changing preset ... "
-pwd
 sed -i -E "s/DISPAYPRESET=[0-9]{1,2}/DISPAYPRESET=$1/g" cameras.config
 
 ./hik.sh reload
