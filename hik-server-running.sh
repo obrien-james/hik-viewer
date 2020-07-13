@@ -5,7 +5,7 @@
 ## check web control server running                ##
 #####################################################
 
-if pgrep hik-server.py &>/dev/null;
+if pgrep -f hik-server.py &>/dev/null;
 
 then
      echo "Hik-server process is running."
