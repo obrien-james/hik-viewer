@@ -7,4 +7,8 @@ Update crontab to check every minute for dropped streams:
 
 Make sure user executing hik.sh script is memeber of video group
 
-Update cameras.config and insert presets; set default
+Update cameras.config and insert presets; set default preset
+
+run as user comand for info
+
+runuser -l james -c 
