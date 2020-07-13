@@ -11,5 +11,6 @@ then
      echo "Process is running."
 else
      echo "Process is not running."
-     nohup python3 ~/hik/hik-server.py &
+     cd /home/james/hik
+     runuser -l james -c 'nohup python3 server.py &'
 fi 
