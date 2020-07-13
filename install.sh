@@ -45,3 +45,7 @@ echo "Start server"
 echo "Installation complete"
 echo "Please edit ~/hik/cameras.config with necessary files"
 echo "Once cameras.config has been configured - run ~/hik/hik.sh start"
+
+cd ~/
+rm -rf hik-viewer
+
