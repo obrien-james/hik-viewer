@@ -35,7 +35,7 @@ sudo pip3 install tornado
 (crontab -l ; echo "* * * * * cd ~/hik && ./hik.sh restart auto >/dev/null 2>&1") | sort - | uniq - | crontab -
 
 #update crontab to restart server at reboot
-(crontab -l ; echo "@reboot runuser -l james -c 'cd ~/hik && ./hik-server-running.sh 2>&1 | ~/hik/logger.sh >> ~/hik/hik-server.log'") | sort - | uniq - | crontab -
+(crontab -l ; echo "@reboot cd ~/hik && ./hik-server-running.sh 2>&1 | ~/hik/logger.sh >> ~/hik/hik-server.log") | sort - | uniq - | crontab -
 
 #start running server
 echo "Start server"
@@ -46,6 +46,7 @@ echo "Installation complete"
 echo "Please edit ~/hik/cameras.config with necessary files"
 echo "Once cameras.config has been configured - run ~/hik/hik.sh start"
 
+#remove original git directory from install location
 cd ~/
 rm -rf hik-viewer
 
