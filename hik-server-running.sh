@@ -11,6 +11,6 @@ then
      echo "Hik-server process is running."
 else
      echo "Hik-server process is not running."
-     cd ~/hik
-     nohup python3 hik-server.py 2>&1 | logger.sh >> hik-server.log &
+     
+     nohup python3 ~/hik/hik-server.py 2>&1 | ~/hik/logger.sh >> hik-server.log &
 fi 
