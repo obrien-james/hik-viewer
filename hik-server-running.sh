@@ -8,7 +8,7 @@
 if pgrep -f hik-server.py &>/dev/null;
 
 then
-     echo "Hik-server process is running."
+     echo "Hik-server process is already running."
 else
      echo "Hik-server process is not running."
      
