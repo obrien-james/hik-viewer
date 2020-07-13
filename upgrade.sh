@@ -20,6 +20,9 @@ chmod 744 ~/hik/hik-viewer/*.py
 #update files
 cp -r ~/hik/hik-viewer/* ~/hik/
 
+#Remove upgrade file from hik directory
+rm ~/hik/upgrade.sh
+
 #restore config settings
 mv ~/hik/cameras.config.original cameras.config
 
