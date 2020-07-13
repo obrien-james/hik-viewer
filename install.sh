@@ -32,10 +32,10 @@ echo "Install tornado"
 sudo pip3 install tornado
 
 #update crontab to check HikViewer running and reconnect to missing streams every minute
-(crontab -l ; echo "*/1 * * * * your_command") | sort - | uniq - | crontab -
+(crontab -l ; echo "* * * * * cd ~/hik && ./hik.sh restart auto >/dev/null 2>&1") | sort - | uniq - | crontab -
 
-#update crontab to check server running every 5 minutes
-(crontab -l ; echo "* * * * * your_command") | sort - | uniq - | crontab -
+#update crontab to restart server at reboot
+(crontab -l ; echo "@reboot sh /home/james/hik/startserver.sh >>/home/james/hik/server.log 2>&1") | sort - | uniq - | crontab -
 
 #start running server
 
