@@ -65,6 +65,10 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 		if message == 'reload':
 			print ('Reloading screens ...')
 			subprocess.run(["~/hik/hik.sh reload"], shell=True)
+			
+		if message == 'off':
+			print ('Turning off Screens')
+			subprocess.run(["~/hik/changepreset.sh 0"], shell=True)
 
 	def on_close(self):
 		print ('[WS] Connection was closed.')
