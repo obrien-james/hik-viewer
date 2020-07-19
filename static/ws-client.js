@@ -25,6 +25,10 @@ $(document).ready(function(){
         $("#reload").click(function(){
             ws.send("reload");
             });
+	
+	$("#off").click(function(){
+            ws.send("off");
+            });
 
         $("#Preset1").click(function(){
             ws.send("Preset1");
