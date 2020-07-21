@@ -50,7 +50,10 @@
 <button id="Preset7" class="button green">Preset 7</button>
 <button id="Preset8" class="button green">Preset 8</button>
 <br>
-	
+<hr>
+{% for lbl in PresetLabels %}
+     <li>{{ lbl }}</li>
+ {% end %}
 <hr>
 Websocket status:
 <br>
