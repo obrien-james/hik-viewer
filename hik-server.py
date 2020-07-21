@@ -24,8 +24,10 @@ class MainHandler(tornado.web.RequestHandler):
 			if line.startswith('NAMES='):
 				for a in line.split("="):
 					if a != "NAMES":
+						print(a, flush=True)
 						for b in a.split("|"):
 							Lbls.append(b)
+							print(b, flush=True)
 		return Lbls
 	def get(self):
 		print ("[HTTP](MainHandler) User Connected.")
@@ -33,7 +35,7 @@ class MainHandler(tornado.web.RequestHandler):
 		self.render("index.html", PresetLabels=PresetLabels)
 class WSHandler(tornado.websocket.WebSocketHandler):
 	def open(self):
-		print ('[WS] Connection was opened.')
+		print ('[WS] Connection was opened.', flush=True)
 		
 	def on_message(self, message):
 		print ('[WS] Incoming message:'), message
@@ -93,7 +95,7 @@ if __name__ == "__main__":
 		http_server.listen(PORT)
 		main_loop = tornado.ioloop.IOLoop.instance()
 		
-		print ("Tornado Server started")
+		print ("Tornado Server started", flush=True)
 		main_loop.start()
 	
 	except:
