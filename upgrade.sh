@@ -30,7 +30,7 @@ mv ~/hik/cameras.config.original cameras.config
 ~/hik/hik.sh reload
 
 #restart server
-pkill -f hik-server.sh
+pkill -f hik-server.py
 ~/hik/hik-server-running.sh
 
 echo "Upgrade complete"
