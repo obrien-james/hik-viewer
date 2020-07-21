@@ -25,7 +25,7 @@ class MainHandler(tornado.web.RequestHandler):
 							 PresetLabels=PresetLabels)
 	
 	def LblNames():
-		Lbls[]
+		Lbls = []
 		for line in open('~/hik/cameras.config'):
 			if line.startswith('NAMES='):
 				for a in line.split("="):
