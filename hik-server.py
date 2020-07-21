@@ -20,7 +20,7 @@ PORT = 8080
 class MainHandler(tornado.web.RequestHandler):
 	def LblNames(self):
 		Lbls = []
-		for line in open('~/hik/cameras.config'):
+		for line in open(os.path.expanduser('~/hik/cameras.config')):
 			if line.startswith('NAMES='):
 				for a in line.split("="):
 					if a != "NAMES":
