@@ -29,7 +29,7 @@ class MainHandler(tornado.web.RequestHandler):
 		return Lbls
 	def get(self):
 		print ("[HTTP](MainHandler) User Connected.")
-		PresetLabels = LblNames()
+		PresetLabels = self.LblNames()
 		self.render("index.html", PresetLabels=PresetLabels)
 class WSHandler(tornado.websocket.WebSocketHandler):
 	def open(self):
