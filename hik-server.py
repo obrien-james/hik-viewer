@@ -21,6 +21,7 @@ class MainHandler(tornado.web.RequestHandler):
 	def LblNames(self):
 		Lbls = []
 		for line in open(os.path.expanduser('~/hik/cameras.config')):
+			print(line, flush=True)
 			if line.startswith('NAMES='):
 				for a in line.split("="):
 					if a != "NAMES":
