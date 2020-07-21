@@ -18,12 +18,6 @@ PORT = 8080
 
 
 class MainHandler(tornado.web.RequestHandler):
-	def get(self):
-		print ("[HTTP](MainHandler) User Connected.")
-		PresetLabels = LblNames()
-		self.render("index.html",
-							 PresetLabels=PresetLabels)
-	
 	def LblNames():
 		Lbls = []
 		for line in open('~/hik/cameras.config'):
@@ -33,8 +27,10 @@ class MainHandler(tornado.web.RequestHandler):
 						for b in a.split("|"):
 							Lbls.append(b)
 		return Lbls
-
-	
+	def get(self):
+		print ("[HTTP](MainHandler) User Connected.")
+		PresetLabels = LblNames()
+		self.render("index.html", PresetLabels=PresetLabels)
 class WSHandler(tornado.websocket.WebSocketHandler):
 	def open(self):
 		print ('[WS] Connection was opened.')
