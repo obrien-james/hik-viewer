@@ -38,21 +38,23 @@
 <button id="reload" class="button red">Reload</button>
 <button id="off" class="button red">Turn Off</button>
 <br><br>
-<button id="Preset1" class="button green">Preset 1</button>
-<button id="Preset2" class="button green">Preset 2</button>
+<button id="Preset1" class="button green PresetBut">Preset 1</button>
+<button id="Preset2" class="button green PresetBut">Preset 2</button>
 <br>
-<button id="Preset3" class="button green">Preset 3</button>
-<button id="Preset4" class="button green">Preset 4</button>
+<button id="Preset3" class="button green PresetBut">Preset 3</button>
+<button id="Preset4" class="button green PresetBut">Preset 4</button>
 <br>
-<button id="Preset5" class="button green">Preset 5</button>
-<button id="Preset6" class="button green">Preset 6</button>
+<button id="Preset5" class="button green PresetBut">Preset 5</button>
+<button id="Preset6" class="button green PresetBut">Preset 6</button>
 <br>
-<button id="Preset7" class="button green">Preset 7</button>
-<button id="Preset8" class="button green">Preset 8</button>
+<button id="Preset7" class="button green PresetBut">Preset 7</button>
+<button id="Preset8" class="button green PresetBut">Preset 8</button>
 <br>
 <hr>
 {% for count, lbl in enumerate(PresetLabels, start=1) %}
      <li>{{ lbl }} {{count}} </li>
+
+<button id="Preset{{count}}" class="button green PresetBut">{{lbl}}</button>
  {% end %}
 <hr>
 Websocket status:
