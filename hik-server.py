@@ -22,10 +22,10 @@ class MainHandler(tornado.web.RequestHandler):
 		Lbls = []
 		for line in open(os.path.expanduser('~/hik/cameras.config')):
 			if line.startswith('NAMES='):
-				txt = line.strip('"')
 				for a in txt.split("="):
 					if a != "NAMES":
 						for b in a.split("|"):
+							b = b.replace('"', '')
 							Lbls.append(b)
 							
 		return Lbls
