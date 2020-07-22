@@ -62,4 +62,9 @@ $(document).ready(function(){
             ws.send("Preset8");
             });
 
+        $(".PresetBut").click(function(event){
+            alert(event.target.id);
+            ws.send("Test");
+            });
+
       });
