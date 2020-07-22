@@ -51,8 +51,8 @@
 <button id="Preset8" class="button green">Preset 8</button>
 <br>
 <hr>
-{% for lbl in PresetLabels %}
-     <li>{{ lbl }}</li>
+{% for count, lbl in enumerate(PresetLabels, start=1) %}
+     <li>{{ lbl }} {{count}} </li>
  {% end %}
 <hr>
 Websocket status:
