@@ -211,6 +211,15 @@ restart)
                 	. startcamera.sh "$DIS" "${!W}" "${!B}" "$C" "HIK-Stream-""$i"
 		fi
 	done
+	if ["${AUDIOPRESET}" != 0]; then
+		AS=$(screen -list | grep "HIK-Audio-Stream"|cut -d'.' -f2|cut -d$'\t' -f1)
+		if [ "$AS" != "HIK-Audio-Stream" ]; then
+		echo "Audio stream not working"
+		echo "restarting audio"
+		D="$(cut -d'|' -f2 <<<"$AUDIOSTRING" | cut -d':' -f1)"
+		E="$(cut -d':' -f2 <<<"$AUDIOSTRING" | cut -d':' -f2)"
+		. startaudio.sh "$DIS" "${!D}" "$E" "HIK-Audio-Stream"
+	fi
 	;;
 esac
 
