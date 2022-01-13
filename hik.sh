@@ -24,6 +24,9 @@ fi
 PRESET=PRESET${DISPAYPRESET}
 STREAMSTRING=${!PRESET}
 
+AUDIO=AUDIO${ADUIOPRESET}
+AUDIOSTRING=${!AUDIO}
+
 STREAMCOUNT="$(cut -d':' -f2 <<<"$STREAMSTRING" | cut -d'|' -f1)"
 
 ##  Calculate screen size and display based on number of streams to display
@@ -178,6 +181,10 @@ start)
                 . startcamera.sh "$DIS" "$WIN9" "${!B}" "$C" "HIK-Stream-9"
 		;;
 	esac
+	echo "starting audio"
+	D="$(cut -d'|' -f2 <<<"$AUDIOSTRING" | cut -d':' -f1)"
+        E="$(cut -d'|' -f2 <<<"$ADUIOSTRING" | cut -d':' -f2)"
+	. startaudio.sh "$DIS" "${!D}" "$E" "HIK-Audio-Stream"
 	;;
 stop)
 	## Stops camera streams
