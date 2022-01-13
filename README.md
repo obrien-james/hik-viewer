@@ -17,6 +17,7 @@ OMXplayer (apt-get install omxplayer)
 - - - - - - - - - - - - - - - - - - - - - - - - 
 
 OMXplayer fix:
+run:  
 
 cd /usr/lib/arm-linux-gnueabihf
 
@@ -39,3 +40,8 @@ sudo curl -sSfLO 'https://raw.githubusercontent.com/raspberrypi/firmware/master/
 sudo curl -sSfLO 'https://raw.githubusercontent.com/raspberrypi/firmware/master/opt/vc/lib/libbrcmGLESv2.so'
 
 sudo curl -sSfLO 'https://raw.githubusercontent.com/raspberrypi/firmware/master/opt/vc/lib/libopenmaxil.so'
+
+## Need to comment out:
+#dtoverlay=vc4-kms-v3d 
+in /boot/config.txt
+
