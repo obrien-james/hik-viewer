@@ -14,4 +14,4 @@
 echo "Starting Stream"
 echo "          Camera - ""$4" 
 # screen -dmS "$5" sh -c 'omxplayer --avdict rtsp_transport:tcp --win "'"$2"'" --display '"$1"' '"$3""$4"'02'
-screen -dmS "$5" sh -c 'omxplayer --avdict rtsp_transport:tcp --dbus_name "org.mpris.MediaPlayer2.omxplayer-'"$5"'" --win "'"$2"'" --threshold 0 --timeout 30 --display '"$1"' '"$3""$4"
+screen -dmS "$5" sh -c 'omxplayer --avdict rtsp_transport:tcp --dbus_name "org.mpris.MediaPlayer2.omxplayer-'"$5"'" --win "'"$2"'" --live --threshold 0 --timeout 30 --display '"$1"' '"$3""$4"
