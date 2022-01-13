@@ -10,7 +10,11 @@ Make sure user executing hik.sh script is memeber of video group
 Update cameras.config and insert presets; set default preset
 - - - - - - - - - - - - - - - - - - - - - - - - 
 
-Requirements: Screen (apt-get install screen)
+Requirements: 
+Screen (apt-get install screen)
+Pip3 (apt-get install python3-pip)
+OMXplayer (apt-get install omxplayer)
+- - - - - - - - - - - - - - - - - - - - - - - - 
 
 OMXplayer fix:
 
