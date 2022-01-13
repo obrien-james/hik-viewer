@@ -24,7 +24,7 @@ fi
 PRESET=PRESET${DISPAYPRESET}
 STREAMSTRING=${!PRESET}
 
-AUDIO=AUDIO${ADUIOPRESET}
+AUDIO=AUDIO${AUDIOPRESET}
 AUDIOSTRING=${!AUDIO}
 
 STREAMCOUNT="$(cut -d':' -f2 <<<"$STREAMSTRING" | cut -d'|' -f1)"
@@ -183,7 +183,7 @@ start)
 	esac
 	echo "starting audio"
 	D="$(cut -d'|' -f2 <<<"$AUDIOSTRING" | cut -d':' -f1)"
-        E="$(cut -d'|' -f2 <<<"$ADUIOSTRING" | cut -d':' -f2)"
+        E="$(cut -d':' -f2 <<<"$AUDIOSTRING" | cut -d':' -f2)"
 	. startaudio.sh "$DIS" "${!D}" "$E" "HIK-Audio-Stream"
 	;;
 stop)
