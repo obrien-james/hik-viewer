@@ -16,6 +16,10 @@ Pip3 (apt-get install python3-pip)
 OMXplayer (apt-get install omxplayer)
 - - - - - - - - - - - - - - - - - - - - - - - - 
 
+OMXPlayer needs to be built: run build-omxplayer.sh
+
+- - - -  - - - - - - - - - - - - - - - - - 
+
 OMXplayer fix:
 run:  
 
